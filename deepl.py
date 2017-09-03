@@ -18,5 +18,5 @@ else:
     encodedRequest = encodeRequest(text)
     response = sendRequest(encodedRequest)
     response = json.loads(response.text)
-    print(response)
+    print(response['result']['translations'][0]['beams'][0]['postprocessed_sentence'])
 
